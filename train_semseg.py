@@ -58,7 +58,7 @@ def main(args):
         print(str)
 
     '''HYPER PARAMETER'''
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
+    # os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
 
     '''CREATE DIR'''
     timestr = str(datetime.datetime.now().strftime('%Y-%m-%d_%H-%M'))
@@ -114,6 +114,10 @@ def main(args):
     shutil.copy('models/pointnet2_utils.py', str(experiment_dir))
 
     classifier = MODEL.get_model(NUM_CLASSES).cuda()
+
+    # 使用 nn.DataParallel 包装模型，指定需要使用的 GPU
+    classifier = torch.nn.DataParallel(classifier, device_ids=[0, 1])  # 使用GPU 0 和 GPU 1
+
     criterion = MODEL.get_loss().cuda()
     classifier.apply(inplace_relu)
 
