@@ -7,9 +7,12 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 sys.path.append(BASE_DIR)
 
-DATA_PATH = os.path.join(ROOT_DIR, 'data','s3dis', 'Stanford3dDataset_v1.2_Aligned_Version')
+DATA_PATH = os.path.join(ROOT_DIR, 'data','s3dis', 'Stanford3dDataset_v1.2_Aligned_Version') # 拼接得到 Stanford 3D Indoor Scene 数据集的路径
+# 从 class_names.txt 文件中读取类别名称，去除每行末尾的空白符（如换行符），并存储在 g_classes 列表中。
 g_classes = [x.rstrip() for x in open(os.path.join(BASE_DIR, 'meta/class_names.txt'))]
+# 构建一个字典，将类别名称映射到相应的标签（数字）。字典的键为类别名称，值为该类别对应的数字标签，从 0 开始递增。
 g_class2label = {cls: i for i,cls in enumerate(g_classes)}
+# 一个字典，将每个类别映射到相应的 RGB 颜色。
 g_class2color = {'ceiling':	[0,255,0],
                  'floor':	[0,0,255],
                  'wall':	[0,255,255],
@@ -22,8 +25,10 @@ g_class2color = {'ceiling':	[0,255,0],
                  'sofa':        [200,100,100],
                  'bookcase':    [10,200,100],
                  'board':       [200,200,200],
-                 'clutter':     [50,50,50]} 
+                 'clutter':     [50,50,50]}
+# 包含相对较容易观察的标签列表，用于某些场景的可视化。
 g_easy_view_labels = [7,8,9,10,11,1]
+# 将类别的数字标签映射到相应的 RGB 颜色
 g_label2color = {g_classes.index(cls): g_class2color[cls] for cls in g_classes}
 
 
@@ -32,33 +37,33 @@ g_label2color = {g_classes.index(cls): g_class2color[cls] for cls in g_classes}
 # -----------------------------------------------------------------------------
 
 def collect_point_label(anno_path, out_filename, file_format='txt'):
-    """ Convert original dataset files to data_label file (each line is XYZRGBL).
-        We aggregated all the points from each instance in the room.
+    """ 将原始数据集文件转换为 data_label 文件（每行是 XYZRGBL）。
+        我们将每个房间中每个实例的所有点聚合在一起。
 
     Args:
-        anno_path: path to annotations. e.g. Area_1/office_2/Annotations/
-        out_filename: path to save collected points and labels (each line is XYZRGBL)
-        file_format: txt or numpy, determines what file format to save.
+        anno_path: 标注文件的路径，例如 Area_1/office_2/Annotations/
+        out_filename: 保存收集到的点和标签的路径（每行是 XYZRGBL）
+        file_format: 文件格式，txt 或 numpy，确定保存为何种文件格式。
     Returns:
         None
     Note:
-        the points are shifted before save, the most negative point is now at origin.
+        保存前会对点进行平移，使得最负的点现在位于原点。
     """
-    points_list = []
+    points_list = [] # 用于存储每个标注文件中的点和标签
     for f in glob.glob(os.path.join(anno_path, '*.txt')):
-        cls = os.path.basename(f).split('_')[0]
+        cls = os.path.basename(f).split('_')[0] # 从文件名中提取类别
         print(f)
         if cls not in g_classes: # note: in some room there is 'staris' class..
             cls = 'clutter'
 
-        points = np.loadtxt(f)
-        labels = np.ones((points.shape[0],1)) * g_class2label[cls]
-        points_list.append(np.concatenate([points, labels], 1)) # Nx7
+        points = np.loadtxt(f) # 从文本文件中加载点云数据
+        labels = np.ones((points.shape[0],1)) * g_class2label[cls] # 创建与点数相同的标签并赋值
+        points_list.append(np.concatenate([points, labels], 1)) # Nx7# 将点和标签拼接在一起，形成 Nx7 的数组
     
-    data_label = np.concatenate(points_list, 0)
-    xyz_min = np.amin(data_label, axis=0)[0:3]
-    data_label[:, 0:3] -= xyz_min
-    
+    data_label = np.concatenate(points_list, 0)  # 将所有点和标签连接在一起，形成大的数组
+    xyz_min = np.amin(data_label, axis=0)[0:3] # 计算数据的最小坐标值
+    data_label[:, 0:3] -= xyz_min  # 将数据的最小坐标平移到原点
+    # 按照不同格式保存点云数据
     if file_format=='txt':
         fout = open(out_filename, 'w')
         for i in range(data_label.shape[0]):

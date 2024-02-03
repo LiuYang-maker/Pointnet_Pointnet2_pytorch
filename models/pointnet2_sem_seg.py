@@ -10,7 +10,6 @@ class get_model(nn.Module):
         # 在构造函数 __init__ 中，
         # 定义了PointNet++中的SetAbstraction层和Feature Propagation层，
         # 以及最终的全连接层。
-
         # Set Abstraction layers
         self.sa1 = PointNetSetAbstraction(1024, 0.1, 32, 9 + 3, [32, 32, 64], False)
         self.sa2 = PointNetSetAbstraction(256, 0.2, 32, 64 + 3, [64, 64, 128], False)
