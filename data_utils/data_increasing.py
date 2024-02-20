@@ -1,5 +1,6 @@
 import numpy as np
 import os
+import glob
 
 '''
 通过点云三维旋转、平移，放缩、随机点丢失、index重排,生成新的点云
@@ -62,6 +63,7 @@ def translate_point_cloud(point_cloud, translation_range=0.1):
     translated_point_cloud = np.concatenate((translated_point_cloud, point_cloud[:, 3:]), axis=1)
     return translated_point_cloud
 
+
 def drop_random_points(point_cloud, max_dropout_ratio=0.2):
     """ Drops random points from the point cloud.随机丢弃点
         Input:
@@ -118,24 +120,57 @@ def save_point_cloud_file(point_cloud, file_path):
     # np.savetxt(file_path, point_cloud, fmt='%.6f')
 
 
-# Example usage
-file_path = r"E:\BaiduSyncdisk\deeplearning-dataset\cc-4-3-phone-video-20240202\video-4-3-400w_with_labels.txt"
-point_cloud_data = read_point_cloud_file(file_path)
-# shuffle point cloud
-point_cloud_data = shuffle_points(point_cloud_data)
-# Randomly scale the point cloud
-point_cloud_data = scale_point_cloud(point_cloud_data)
-# Randomly rotate the point cloud
-point_cloud_data = rotate_point_cloud(point_cloud_data)
+def process_point_cloud_folder(folder_path, increse_times=4):
+    # 读取文件夹中的所有文件
+    subfolders = []
+    with os.scandir(folder_path) as entries:
+        for entry in entries:
+            if entry.is_dir():
+                subfolders.append(entry.path)
+    for subfolder in subfolders:
+        file_paths = glob.glob(os.path.join(subfolder, "*.txt"))
+        for file_path in file_paths:
+            # 处理每个文件
+            point_cloud_data = read_point_cloud_file(file_path)
+            for i in range(increse_times):
+                # 默认每个文件随机调整4次
+                # 进行其他处理操作，例如旋转、平移、缩放、丢弃等
+                # shuffle point cloud
+                adjust_point_cloud_data = shuffle_points(point_cloud_data)
+                # Randomly scale the point cloud
+                adjust_point_cloud_data = scale_point_cloud(adjust_point_cloud_data)
+                # Randomly rotate the point cloud
+                adjust_point_cloud_data = rotate_point_cloud(adjust_point_cloud_data)
+                # Randomly translate the point cloud
+                adjust_point_cloud_data = translate_point_cloud(adjust_point_cloud_data)
+                adjust_point_cloud_data = drop_random_points(adjust_point_cloud_data)
+                # 保存处理后的点云数据到新的文件
+                output_file_path = file_path.split('.')[0] + 'processed_' + str(i) + '.txt'
+                save_point_cloud_file(adjust_point_cloud_data, output_file_path)
+                print("Processed point cloud saved to:", output_file_path)
 
-# Randomly translate the point cloud
-point_cloud_data = translate_point_cloud(point_cloud_data)
 
-point_cloud_data = drop_random_points(point_cloud_data)
-
-# Save the transformed point cloud to a new file in the original folder
-output_file_path = os.path.join(os.path.dirname(file_path), "transformed_point_cloud.txt")
-
-save_point_cloud_file(point_cloud_data, output_file_path)
-
-print("Transformed point cloud saved to:", output_file_path)
+# # Example usage
+# file_path = r"E:\BaiduSyncdisk\deeplearning-dataset\cc-4-3-phone-video-20240202\video-4-3-400w_with_labels.txt"
+# point_cloud_data = read_point_cloud_file(file_path)
+# # shuffle point cloud
+# point_cloud_data = shuffle_points(point_cloud_data)
+# # Randomly scale the point cloud
+# point_cloud_data = scale_point_cloud(point_cloud_data)
+# # Randomly rotate the point cloud
+# point_cloud_data = rotate_point_cloud(point_cloud_data)
+#
+# # Randomly translate the point cloud
+# point_cloud_data = translate_point_cloud(point_cloud_data)
+#
+# point_cloud_data = drop_random_points(point_cloud_data)
+#
+# # Save the transformed point cloud to a new file in the original folder
+# output_file_path = os.path.join(os.path.dirname(file_path), "transformed_point_cloud.txt")
+#
+# save_point_cloud_file(point_cloud_data, output_file_path)
+#
+# print("Transformed point cloud saved to:", output_file_path)
+if __name__ == '__main__':
+    folder_path = r"E:\cloud-point-process\deeplearning-dataset"
+    process_point_cloud_folder(folder_path, increse_times=10)

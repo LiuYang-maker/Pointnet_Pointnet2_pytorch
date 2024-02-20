@@ -100,7 +100,7 @@ def read_las(file_path):
 
 if __name__ == '__main__':
     # 读取JSON文件
-    json_file = r"E:\BaiduSyncdisk\deeplearning-dataset\cc-2-1-phone-video-20240130\video-2-1-400w.json"
-    point_cloud_name = r"E:\BaiduSyncdisk\deeplearning-dataset\cc-2-1-phone-video-20240130\video-2-1-400w.txt"
+    json_file = r"E:\BaiduSyncdisk\deeplearning-dataset\cc-4-3-phone-video-20240202\video-4-3-400w.json"
+    point_cloud_name = r"E:\BaiduSyncdisk\deeplearning-dataset\cc-4-3-phone-video-20240202\video-4-3-400w.txt"
 
     point_cloud_add_label(point_cloud_name, json_file)
