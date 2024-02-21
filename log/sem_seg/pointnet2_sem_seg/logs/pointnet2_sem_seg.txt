@@ -1033,3 +1033,24 @@ class clutter        weight: 0.011, IoU: 0.409
 2024-02-01 16:47:19,320 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=16, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=5)
 2024-02-01 16:47:47,806 - Model - INFO - The number of training data is: 47623
 2024-02-01 16:47:47,806 - Model - INFO - The number of test data is: 18923
+2024-02-21 23:53:18,477 - Model - INFO - PARAMETER ...
+2024-02-21 23:53:18,478 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=16, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-21 23:54:04,613 - Model - INFO - The number of training data is: 136441
+2024-02-21 23:54:04,613 - Model - INFO - The number of test data is: 26408
+2024-02-21 23:54:04,627 - Model - INFO - No existing model, starting training from scratch...
+2024-02-21 23:54:04,635 - Model - INFO - **** Epoch 1 (1/32) ****
+2024-02-21 23:54:04,635 - Model - INFO - Learning rate:0.001000
+2024-02-22 00:06:03,952 - Model - INFO - PARAMETER ...
+2024-02-22 00:06:03,952 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=16, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 00:06:49,902 - Model - INFO - The number of training data is: 136441
+2024-02-22 00:06:49,902 - Model - INFO - The number of test data is: 26408
+2024-02-22 00:06:49,915 - Model - INFO - No existing model, starting training from scratch...
+2024-02-22 00:06:49,919 - Model - INFO - **** Epoch 1 (1/32) ****
+2024-02-22 00:06:49,919 - Model - INFO - Learning rate:0.001000
+2024-02-22 00:25:28,970 - Model - INFO - PARAMETER ...
+2024-02-22 00:25:28,970 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=16, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 00:26:15,104 - Model - INFO - The number of training data is: 136441
+2024-02-22 00:26:15,104 - Model - INFO - The number of test data is: 26408
+2024-02-22 00:26:15,117 - Model - INFO - No existing model, starting training from scratch...
+2024-02-22 00:26:15,121 - Model - INFO - **** Epoch 1 (1/32) ****
+2024-02-22 00:26:15,121 - Model - INFO - Learning rate:0.001000

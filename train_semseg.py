@@ -17,6 +17,9 @@ import provider
 import numpy as np
 import time
 
+# os.environ['CUDA_LAUNCH_BLOCKING'] = '1' # 下面老是报错 shape 不一致
+
+
 # 获取绝对路径的目录名称，实际上得到了基础目录。
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
@@ -59,7 +62,7 @@ def parse_args():
     parser.add_argument('--npoint', type=int, default=4096, help='Point Number [default: 4096]')
     parser.add_argument('--step_size', type=int, default=10, help='Decay step for lr decay [default: every 10 epochs]')
     parser.add_argument('--lr_decay', type=float, default=0.7, help='Decay rate for lr decay [default: 0.7]')
-    parser.add_argument('--test_area', type=int, default=5, help='Which area to use for test, option: 1-6 [default: 5]')
+    parser.add_argument('--test_area', type=int, default=4, help='Which area to use for test, option: 1-6 [default: 5]')
 
     return parser.parse_args()
 

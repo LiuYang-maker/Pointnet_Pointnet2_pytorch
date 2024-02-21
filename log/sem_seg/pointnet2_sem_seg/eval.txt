@@ -190,3 +190,6 @@ class clutter       , IoU: 0.429
 2024-02-17 00:44:17,720 - Model - INFO - eval point avg class IoU: 0.543933
 2024-02-17 00:44:17,720 - Model - INFO - eval whole scene point avg class acc: 0.642904
 2024-02-17 00:44:17,720 - Model - INFO - eval whole scene point accuracy: 0.834637
+2024-02-22 00:24:30,326 - Model - INFO - PARAMETER ...
+2024-02-22 00:24:30,326 - Model - INFO - Namespace(batch_size=32, gpu='1', num_point=4096, log_dir='pointnet2_sem_seg', visual=True, test_area=4, num_votes=3)
+2024-02-22 00:24:33,746 - Model - INFO - The number of test data is: 49

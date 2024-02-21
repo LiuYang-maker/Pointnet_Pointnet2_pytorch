@@ -194,7 +194,7 @@ class ScannetDatasetWholeScene():
 
 if __name__ == '__main__':
     # data_root = '/data/yxu/PointNonLocal/data/stanford_indoor3d/'
-    data_root = '../data/frame_dataset_npy/'
+    data_root = '/home/ljy/PycharmProjects/Pointnet_Pointnet2_pytorch/data/frame_dataset_npy'
     num_point, test_area, block_size, sample_rate = 4096, 4, 1.0, 1.0
 
     point_data = S3DISDataset(split='train', data_root=data_root, num_point=num_point, test_area=test_area,
