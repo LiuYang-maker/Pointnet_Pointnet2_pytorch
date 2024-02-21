@@ -6,33 +6,34 @@ from torch.utils.data import Dataset
 
 
 class S3DISDataset(Dataset):
-    def __init__(self, split='train', data_root='trainval_fullarea', num_point=4096, test_area=5, block_size=1.0,
+    def __init__(self, split='train', data_root='../data/frame_dataset_npy/', num_point=4096, test_area=4, block_size=1.0,
                  sample_rate=1.0, transform=None):
         super().__init__()  # 调用父类的构造函数，初始化基类 Dataset。
         self.num_point = num_point  # 设置实例变量 num_point，表示每个样本点云的点数。
         self.block_size = block_size  # 表示数据块的大小。
         self.transform = transform  # 设置实例变量 transform，表示用于对数据进行转换的函数。
-        rooms = sorted(os.listdir(data_root))  # 获取指定路径下的所有目录，并对其进行排序，将目录名存储在列表 rooms 中。
-        rooms = [room for room in rooms if 'Area_' in room]  # 筛选出列表 rooms 中包含字符串 'Area_' 的目录。
+        frames = sorted(os.listdir(data_root))  # 获取指定路径下的所有目录，并对其进行排序，将目录名存储在列表 rooms 中。
+        frames = [frame for frame in frames if 'frame-' in frame]  # 筛选出列表 rooms 中包含字符串 'Area_' 的目录。
         # 根据 split 参数的值选择训练集或测试集的房间列表。
         if split == 'train':
-            rooms_split = [room for room in rooms if not 'Area_{}'.format(test_area) in room]
+            rooms_split = [frame for frame in frames if not '_{}.npy'.format(test_area) in frame]
         else:
-            rooms_split = [room for room in rooms if 'Area_{}'.format(test_area) in room]
+            rooms_split = [frame for frame in frames if '_{}.npy'.format(test_area) in frame]
+            # rooms_split = [room for room in rooms if 'Area_{}'.format(test_area) in room]
         # 初始化存储点云和标签的列表。
         self.room_points, self.room_labels = [], []
         # 初始化存储每个房间的坐标最小值和最大值的列表。
         self.room_coord_min, self.room_coord_max = [], []
         # 初始化存储每个房间点数的列表。
         num_point_all = []
-        # 初始化长度为 13 的零数组，用于统计每个类别的点数。
-        labelweights = np.zeros(13)
+        # 初始化长度为 10 的零数组，用于统计每个类别的点数。
+        labelweights = np.zeros(10)
         # 遍历选定的房间列表，并使用 tqdm 进行迭代可视化。
         for room_name in tqdm(rooms_split, total=len(rooms_split)):
             room_path = os.path.join(data_root, room_name)
             room_data = np.load(room_path)  # xyzrgbl, N*7 从房间numpy文件加载点云数据，room_data 是一个 N*7 的数组，包含 xyzrgbl 信息。
             points, labels = room_data[:, 0:6], room_data[:, 6]  # xyzrgb, N*6; l, N
-            tmp, _ = np.histogram(labels, range(14))  # 使用直方图统计每个类别的点数，将结果存储在 tmp 中。
+            tmp, _ = np.histogram(labels, range(11))  # 使用直方图统计每个类别的点数，将结果存储在 tmp 中。
             labelweights += tmp
             # 计算当前房间点云的坐标最小值和最大值。
             coord_min, coord_max = np.amin(points, axis=0)[:3], np.amax(points, axis=0)[:3]
@@ -193,8 +194,8 @@ class ScannetDatasetWholeScene():
 
 if __name__ == '__main__':
     # data_root = '/data/yxu/PointNonLocal/data/stanford_indoor3d/'
-    data_root = '../data/stanford_indoor3d/'
-    num_point, test_area, block_size, sample_rate = 4096, 5, 1.0, 1.0
+    data_root = '../data/frame_dataset_npy/'
+    num_point, test_area, block_size, sample_rate = 4096, 4, 1.0, 1.0
 
     point_data = S3DISDataset(split='train', data_root=data_root, num_point=num_point, test_area=test_area,
                               block_size=block_size, sample_rate=sample_rate, transform=None)

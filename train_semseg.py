@@ -23,9 +23,9 @@ ROOT_DIR = BASE_DIR
 # 将 'models' 目录添加到 Python 路径中。这允许脚本从 'models' 目录导入模块。
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
+
 # 定义一个类别名称的列表。
-classes = ['ceiling', 'floor', 'wall', 'beam', 'column', 'window', 'door', 'table', 'chair', 'sofa', 'bookcase',
-           'board', 'clutter']
+classes = ['ground', 'wall', 'column', 'beam', 'weight', 'bolt', 'floor', 'foundation', 'sundries', 'joint']
 # 创建一个将类别名称映射到整数标签的字典。
 class2label = {cls: i for i, cls in enumerate(classes)}
 seg_classes = class2label
@@ -126,8 +126,8 @@ def main(args):
     '''
     设置数据集的根目录和一些常数，如类别数、点云数和批次大小。
     '''
-    root = 'data/stanford_indoor3d/'
-    NUM_CLASSES = 13
+    root = 'data/frame_dataset_npy/'
+    NUM_CLASSES = 10
     NUM_POINT = args.npoint
     BATCH_SIZE = args.batch_size
 
