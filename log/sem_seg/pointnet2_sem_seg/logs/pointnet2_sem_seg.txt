@@ -1054,3 +1054,10 @@ class clutter        weight: 0.011, IoU: 0.409
 2024-02-22 00:26:15,117 - Model - INFO - No existing model, starting training from scratch...
 2024-02-22 00:26:15,121 - Model - INFO - **** Epoch 1 (1/32) ****
 2024-02-22 00:26:15,121 - Model - INFO - Learning rate:0.001000
+2024-02-22 00:48:40,877 - Model - INFO - PARAMETER ...
+2024-02-22 00:48:40,877 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=16, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 00:49:26,968 - Model - INFO - The number of training data is: 136441
+2024-02-22 00:49:26,968 - Model - INFO - The number of test data is: 26408
+2024-02-22 00:49:26,981 - Model - INFO - No existing model, starting training from scratch...
+2024-02-22 00:49:26,986 - Model - INFO - **** Epoch 1 (1/32) ****
+2024-02-22 00:49:26,986 - Model - INFO - Learning rate:0.001000
