@@ -19,10 +19,13 @@ def main():
 
 def main3():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    subfolder = os.path.join(BASE_DIR, 'data/frame_dataset_npy')
+    subfolder = os.path.join(BASE_DIR, 'data/temp')
     file_paths = glob.glob(os.path.join(subfolder, "*.npy"))
     for file_path in file_paths:
         room_data = np.load(file_path)
+        room_data[:, -1] -= 1
+        np.save(file_path, room_data)
+        print(file_path + ':success!')
 
 
 def main2():
@@ -37,5 +40,17 @@ def main2():
         seg_label_to_cat[i + 1] = cat
 
 
+def check_npy():
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    subfolder = os.path.join(BASE_DIR, 'data/frame_dataset_npy')
+    file_paths = glob.glob(os.path.join(subfolder, "*.npy"))
+    for file_path in file_paths:
+        room_data = np.load(file_path)
+        for e in room_data[:, -1]:
+            if e < 0 or e > 9:
+                print(file_path + ':exist error! e='+str(e))
+
+
 if __name__ == '__main__':
     main3()
+    # check_npy()

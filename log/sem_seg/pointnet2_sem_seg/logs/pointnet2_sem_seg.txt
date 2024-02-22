@@ -1061,3 +1061,313 @@ class clutter        weight: 0.011, IoU: 0.409
 2024-02-22 00:49:26,981 - Model - INFO - No existing model, starting training from scratch...
 2024-02-22 00:49:26,986 - Model - INFO - **** Epoch 1 (1/32) ****
 2024-02-22 00:49:26,986 - Model - INFO - Learning rate:0.001000
+2024-02-22 01:13:45,122 - Model - INFO - PARAMETER ...
+2024-02-22 01:13:45,122 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=16, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 01:14:31,312 - Model - INFO - The number of training data is: 136441
+2024-02-22 01:14:31,312 - Model - INFO - The number of test data is: 26408
+2024-02-22 01:14:31,325 - Model - INFO - No existing model, starting training from scratch...
+2024-02-22 01:14:31,329 - Model - INFO - **** Epoch 1 (1/32) ****
+2024-02-22 01:14:31,329 - Model - INFO - Learning rate:0.001000
+2024-02-22 01:21:23,994 - Model - INFO - PARAMETER ...
+2024-02-22 01:21:23,994 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=16, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 01:22:10,143 - Model - INFO - The number of training data is: 136441
+2024-02-22 01:22:10,143 - Model - INFO - The number of test data is: 26408
+2024-02-22 01:22:10,156 - Model - INFO - No existing model, starting training from scratch...
+2024-02-22 01:22:10,161 - Model - INFO - **** Epoch 1 (1/32) ****
+2024-02-22 01:22:10,161 - Model - INFO - Learning rate:0.001000
+2024-02-22 01:23:22,637 - Model - INFO - PARAMETER ...
+2024-02-22 01:23:22,637 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=16, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 01:24:08,769 - Model - INFO - The number of training data is: 136441
+2024-02-22 01:24:08,770 - Model - INFO - The number of test data is: 26408
+2024-02-22 01:24:08,783 - Model - INFO - No existing model, starting training from scratch...
+2024-02-22 01:24:08,787 - Model - INFO - **** Epoch 1 (1/32) ****
+2024-02-22 01:24:08,787 - Model - INFO - Learning rate:0.001000
+2024-02-22 13:58:51,683 - Model - INFO - PARAMETER ...
+2024-02-22 13:58:51,683 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=16, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 13:59:33,156 - Model - INFO - The number of training data is: 122905
+2024-02-22 13:59:33,156 - Model - INFO - The number of test data is: 23797
+2024-02-22 13:59:33,169 - Model - INFO - No existing model, starting training from scratch...
+2024-02-22 13:59:33,173 - Model - INFO - **** Epoch 1 (1/32) ****
+2024-02-22 13:59:33,173 - Model - INFO - Learning rate:0.001000
+2024-02-22 14:55:01,557 - Model - INFO - Training mean loss: 0.423429
+2024-02-22 14:55:01,557 - Model - INFO - Training accuracy: 0.875609
+2024-02-22 14:55:01,557 - Model - INFO - Save model...
+2024-02-22 14:55:01,557 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2024-02-22 14:55:01,590 - Model - INFO - Saving model....
+2024-02-22 14:55:02,452 - Model - INFO - ---- EPOCH 001 EVALUATION ----
+2024-02-22 15:03:40,871 - Model - INFO - eval mean loss: 0.226042
+2024-02-22 15:03:40,871 - Model - INFO - eval point avg class IoU: 0.762299
+2024-02-22 15:03:40,871 - Model - INFO - eval point accuracy: 0.930661
+2024-02-22 15:03:40,871 - Model - INFO - eval point avg class acc: 0.859306
+2024-02-22 15:03:40,871 - Model - INFO - ------- IoU --------
+class ground         weight: 0.017, IoU: 0.974 
+class wall           weight: 0.369, IoU: 0.831 
+class column         weight: 0.045, IoU: 0.843 
+class beam           weight: 0.065, IoU: 0.776 
+class weight         weight: 0.107, IoU: 0.905 
+class bolt           weight: 0.155, IoU: 0.654 
+class floor          weight: 0.008, IoU: 0.805 
+class foundation     weight: 0.147, IoU: 0.856 
+class sundries       weight: 0.076, IoU: 0.493 
+class joint          weight: 0.012, IoU: 0.486 
+
+2024-02-22 15:03:40,871 - Model - INFO - Eval mean loss: 0.226042
+2024-02-22 15:03:40,871 - Model - INFO - Eval accuracy: 0.930661
+2024-02-22 15:03:40,871 - Model - INFO - Save model...
+2024-02-22 15:03:40,871 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 15:03:40,904 - Model - INFO - Saving model....
+2024-02-22 15:03:40,904 - Model - INFO - Best mIoU: 0.762299
+2024-02-22 15:03:40,904 - Model - INFO - **** Epoch 2 (2/32) ****
+2024-02-22 15:03:40,904 - Model - INFO - Learning rate:0.001000
+2024-02-22 15:59:37,258 - Model - INFO - Training mean loss: 0.226057
+2024-02-22 15:59:37,258 - Model - INFO - Training accuracy: 0.932593
+2024-02-22 15:59:38,172 - Model - INFO - ---- EPOCH 002 EVALUATION ----
+2024-02-22 16:08:17,479 - Model - INFO - eval mean loss: 0.188233
+2024-02-22 16:08:17,479 - Model - INFO - eval point avg class IoU: 0.786296
+2024-02-22 16:08:17,488 - Model - INFO - eval point accuracy: 0.940722
+2024-02-22 16:08:17,488 - Model - INFO - eval point avg class acc: 0.890817
+2024-02-22 16:08:17,488 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.982 
+class wall           weight: 0.372, IoU: 0.862 
+class column         weight: 0.046, IoU: 0.865 
+class beam           weight: 0.063, IoU: 0.793 
+class weight         weight: 0.106, IoU: 0.915 
+class bolt           weight: 0.156, IoU: 0.657 
+class floor          weight: 0.008, IoU: 0.828 
+class foundation     weight: 0.147, IoU: 0.898 
+class sundries       weight: 0.075, IoU: 0.531 
+class joint          weight: 0.012, IoU: 0.532 
+
+2024-02-22 16:08:17,488 - Model - INFO - Eval mean loss: 0.188233
+2024-02-22 16:08:17,488 - Model - INFO - Eval accuracy: 0.940722
+2024-02-22 16:08:17,488 - Model - INFO - Save model...
+2024-02-22 16:08:17,488 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 16:08:17,527 - Model - INFO - Saving model....
+2024-02-22 16:08:17,527 - Model - INFO - Best mIoU: 0.786296
+2024-02-22 16:08:17,527 - Model - INFO - **** Epoch 3 (3/32) ****
+2024-02-22 16:08:17,527 - Model - INFO - Learning rate:0.001000
+2024-02-22 16:12:01,860 - Model - INFO - PARAMETER ...
+2024-02-22 16:12:01,860 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=24, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 16:12:47,880 - Model - INFO - The number of training data is: 136715
+2024-02-22 16:12:47,881 - Model - INFO - The number of test data is: 26338
+2024-02-22 16:12:47,924 - Model - INFO - Use pretrain model
+2024-02-22 16:12:47,925 - Model - INFO - **** Epoch 1 (2/32) ****
+2024-02-22 16:12:47,925 - Model - INFO - Learning rate:0.001000
+2024-02-22 16:17:12,324 - Model - INFO - PARAMETER ...
+2024-02-22 16:17:12,324 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=24, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=4096, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 16:17:58,219 - Model - INFO - The number of training data is: 136715
+2024-02-22 16:17:58,220 - Model - INFO - The number of test data is: 26338
+2024-02-22 16:17:58,263 - Model - INFO - Use pretrain model
+2024-02-22 16:17:58,263 - Model - INFO - **** Epoch 1 (2/32) ****
+2024-02-22 16:17:58,264 - Model - INFO - Learning rate:0.001000
+2024-02-22 16:20:21,914 - Model - INFO - PARAMETER ...
+2024-02-22 16:20:21,914 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=24, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=8192, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 16:21:07,957 - Model - INFO - The number of training data is: 68356
+2024-02-22 16:21:07,957 - Model - INFO - The number of test data is: 13167
+2024-02-22 16:21:08,001 - Model - INFO - Use pretrain model
+2024-02-22 16:21:08,001 - Model - INFO - **** Epoch 1 (2/32) ****
+2024-02-22 16:21:08,002 - Model - INFO - Learning rate:0.001000
+2024-02-22 16:23:00,484 - Model - INFO - PARAMETER ...
+2024-02-22 16:23:00,484 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=24, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=12288, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 16:23:46,590 - Model - INFO - The number of training data is: 45575
+2024-02-22 16:23:46,590 - Model - INFO - The number of test data is: 8781
+2024-02-22 16:23:46,634 - Model - INFO - Use pretrain model
+2024-02-22 16:23:46,634 - Model - INFO - **** Epoch 1 (2/32) ****
+2024-02-22 16:23:46,634 - Model - INFO - Learning rate:0.001000
+2024-02-22 16:25:39,404 - Model - INFO - PARAMETER ...
+2024-02-22 16:25:39,404 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=24, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=16384, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 16:26:25,490 - Model - INFO - The number of training data is: 34168
+2024-02-22 16:26:25,490 - Model - INFO - The number of test data is: 6584
+2024-02-22 16:26:25,534 - Model - INFO - Use pretrain model
+2024-02-22 16:26:25,534 - Model - INFO - **** Epoch 1 (2/32) ****
+2024-02-22 16:26:25,534 - Model - INFO - Learning rate:0.001000
+2024-02-22 16:27:29,185 - Model - INFO - PARAMETER ...
+2024-02-22 16:27:29,185 - Model - INFO - Namespace(model='pointnet2_sem_seg', batch_size=24, epoch=32, learning_rate=0.001, gpu='0', optimizer='Adam', log_dir='pointnet2_sem_seg', decay_rate=0.0001, npoint=14336, step_size=10, lr_decay=0.7, test_area=4)
+2024-02-22 16:28:15,287 - Model - INFO - The number of training data is: 39055
+2024-02-22 16:28:15,288 - Model - INFO - The number of test data is: 7522
+2024-02-22 16:28:15,331 - Model - INFO - Use pretrain model
+2024-02-22 16:28:15,332 - Model - INFO - **** Epoch 1 (2/32) ****
+2024-02-22 16:28:15,332 - Model - INFO - Learning rate:0.001000
+2024-02-22 16:48:38,109 - Model - INFO - Training mean loss: 0.194147
+2024-02-22 16:48:38,110 - Model - INFO - Training accuracy: 0.940756
+2024-02-22 16:48:38,293 - Model - INFO - ---- EPOCH 001 EVALUATION ----
+2024-02-22 16:52:14,704 - Model - INFO - eval mean loss: 0.167937
+2024-02-22 16:52:14,704 - Model - INFO - eval point avg class IoU: 0.803712
+2024-02-22 16:52:14,705 - Model - INFO - eval point accuracy: 0.943061
+2024-02-22 16:52:14,705 - Model - INFO - eval point avg class acc: 0.901011
+2024-02-22 16:52:14,705 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.974 
+class wall           weight: 0.372, IoU: 0.914 
+class column         weight: 0.051, IoU: 0.891 
+class beam           weight: 0.063, IoU: 0.824 
+class weight         weight: 0.107, IoU: 0.906 
+class bolt           weight: 0.156, IoU: 0.690 
+class floor          weight: 0.008, IoU: 0.835 
+class foundation     weight: 0.146, IoU: 0.872 
+class sundries       weight: 0.069, IoU: 0.561 
+class joint          weight: 0.012, IoU: 0.572 
+
+2024-02-22 16:52:14,705 - Model - INFO - Eval mean loss: 0.167937
+2024-02-22 16:52:14,705 - Model - INFO - Eval accuracy: 0.943061
+2024-02-22 16:52:14,705 - Model - INFO - Save model...
+2024-02-22 16:52:14,705 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 16:52:14,751 - Model - INFO - Saving model....
+2024-02-22 16:52:14,751 - Model - INFO - Best mIoU: 0.803712
+2024-02-22 16:52:14,751 - Model - INFO - **** Epoch 2 (3/32) ****
+2024-02-22 16:52:14,751 - Model - INFO - Learning rate:0.001000
+2024-02-22 17:12:34,699 - Model - INFO - Training mean loss: 0.179920
+2024-02-22 17:12:34,699 - Model - INFO - Training accuracy: 0.944872
+2024-02-22 17:12:34,890 - Model - INFO - ---- EPOCH 002 EVALUATION ----
+2024-02-22 17:16:13,354 - Model - INFO - eval mean loss: 0.151817
+2024-02-22 17:16:13,354 - Model - INFO - eval point avg class IoU: 0.813556
+2024-02-22 17:16:13,354 - Model - INFO - eval point accuracy: 0.950535
+2024-02-22 17:16:13,354 - Model - INFO - eval point avg class acc: 0.909140
+2024-02-22 17:16:13,354 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.988 
+class wall           weight: 0.381, IoU: 0.910 
+class column         weight: 0.049, IoU: 0.867 
+class beam           weight: 0.064, IoU: 0.832 
+class weight         weight: 0.104, IoU: 0.921 
+class bolt           weight: 0.154, IoU: 0.688 
+class floor          weight: 0.008, IoU: 0.848 
+class foundation     weight: 0.144, IoU: 0.925 
+class sundries       weight: 0.068, IoU: 0.602 
+class joint          weight: 0.011, IoU: 0.556 
+
+2024-02-22 17:16:13,354 - Model - INFO - Eval mean loss: 0.151817
+2024-02-22 17:16:13,354 - Model - INFO - Eval accuracy: 0.950535
+2024-02-22 17:16:13,354 - Model - INFO - Save model...
+2024-02-22 17:16:13,354 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 17:16:13,402 - Model - INFO - Saving model....
+2024-02-22 17:16:13,402 - Model - INFO - Best mIoU: 0.813556
+2024-02-22 17:16:13,402 - Model - INFO - **** Epoch 3 (4/32) ****
+2024-02-22 17:16:13,402 - Model - INFO - Learning rate:0.001000
+2024-02-22 17:36:39,432 - Model - INFO - Training mean loss: 0.180538
+2024-02-22 17:36:39,432 - Model - INFO - Training accuracy: 0.944765
+2024-02-22 17:36:39,621 - Model - INFO - ---- EPOCH 003 EVALUATION ----
+2024-02-22 17:40:17,719 - Model - INFO - eval mean loss: 0.157638
+2024-02-22 17:40:17,719 - Model - INFO - eval point avg class IoU: 0.810870
+2024-02-22 17:40:17,719 - Model - INFO - eval point accuracy: 0.948759
+2024-02-22 17:40:17,719 - Model - INFO - eval point avg class acc: 0.905410
+2024-02-22 17:40:17,719 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.984 
+class wall           weight: 0.370, IoU: 0.902 
+class column         weight: 0.051, IoU: 0.897 
+class beam           weight: 0.064, IoU: 0.820 
+class weight         weight: 0.108, IoU: 0.920 
+class bolt           weight: 0.157, IoU: 0.704 
+class floor          weight: 0.008, IoU: 0.845 
+class foundation     weight: 0.147, IoU: 0.915 
+class sundries       weight: 0.069, IoU: 0.535 
+class joint          weight: 0.011, IoU: 0.586 
+
+2024-02-22 17:40:17,720 - Model - INFO - Eval mean loss: 0.157638
+2024-02-22 17:40:17,720 - Model - INFO - Eval accuracy: 0.948759
+2024-02-22 17:40:17,720 - Model - INFO - Best mIoU: 0.813556
+2024-02-22 17:40:17,720 - Model - INFO - **** Epoch 4 (5/32) ****
+2024-02-22 17:40:17,720 - Model - INFO - Learning rate:0.001000
+2024-02-22 18:00:46,812 - Model - INFO - Training mean loss: 0.176316
+2024-02-22 18:00:46,812 - Model - INFO - Training accuracy: 0.945963
+2024-02-22 18:00:47,056 - Model - INFO - ---- EPOCH 004 EVALUATION ----
+2024-02-22 18:04:25,949 - Model - INFO - eval mean loss: 0.156628
+2024-02-22 18:04:25,949 - Model - INFO - eval point avg class IoU: 0.812344
+2024-02-22 18:04:25,949 - Model - INFO - eval point accuracy: 0.948812
+2024-02-22 18:04:25,949 - Model - INFO - eval point avg class acc: 0.902649
+2024-02-22 18:04:25,949 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.987 
+class wall           weight: 0.383, IoU: 0.909 
+class column         weight: 0.049, IoU: 0.888 
+class beam           weight: 0.063, IoU: 0.821 
+class weight         weight: 0.104, IoU: 0.915 
+class bolt           weight: 0.154, IoU: 0.705 
+class floor          weight: 0.008, IoU: 0.836 
+class foundation     weight: 0.144, IoU: 0.916 
+class sundries       weight: 0.069, IoU: 0.585 
+class joint          weight: 0.011, IoU: 0.561 
+
+2024-02-22 18:04:25,949 - Model - INFO - Eval mean loss: 0.156628
+2024-02-22 18:04:25,949 - Model - INFO - Eval accuracy: 0.948812
+2024-02-22 18:04:25,949 - Model - INFO - Best mIoU: 0.813556
+2024-02-22 18:04:25,949 - Model - INFO - **** Epoch 5 (6/32) ****
+2024-02-22 18:04:25,949 - Model - INFO - Learning rate:0.001000
+2024-02-22 18:24:51,764 - Model - INFO - Training mean loss: 0.177341
+2024-02-22 18:24:51,764 - Model - INFO - Training accuracy: 0.945344
+2024-02-22 18:24:51,764 - Model - INFO - Save model...
+2024-02-22 18:24:51,764 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2024-02-22 18:24:51,811 - Model - INFO - Saving model....
+2024-02-22 18:24:52,009 - Model - INFO - ---- EPOCH 005 EVALUATION ----
+2024-02-22 18:28:30,429 - Model - INFO - eval mean loss: 0.149653
+2024-02-22 18:28:30,429 - Model - INFO - eval point avg class IoU: 0.820774
+2024-02-22 18:28:30,429 - Model - INFO - eval point accuracy: 0.951533
+2024-02-22 18:28:30,429 - Model - INFO - eval point avg class acc: 0.900930
+2024-02-22 18:28:30,429 - Model - INFO - ------- IoU --------
+class ground         weight: 0.017, IoU: 0.987 
+class wall           weight: 0.375, IoU: 0.909 
+class column         weight: 0.049, IoU: 0.893 
+class beam           weight: 0.065, IoU: 0.833 
+class weight         weight: 0.106, IoU: 0.922 
+class bolt           weight: 0.155, IoU: 0.698 
+class floor          weight: 0.008, IoU: 0.842 
+class foundation     weight: 0.145, IoU: 0.923 
+class sundries       weight: 0.069, IoU: 0.609 
+class joint          weight: 0.012, IoU: 0.592 
+
+2024-02-22 18:28:30,429 - Model - INFO - Eval mean loss: 0.149653
+2024-02-22 18:28:30,429 - Model - INFO - Eval accuracy: 0.951533
+2024-02-22 18:28:30,429 - Model - INFO - Save model...
+2024-02-22 18:28:30,429 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 18:28:30,477 - Model - INFO - Saving model....
+2024-02-22 18:28:30,478 - Model - INFO - Best mIoU: 0.820774
+2024-02-22 18:28:30,478 - Model - INFO - **** Epoch 6 (7/32) ****
+2024-02-22 18:28:30,478 - Model - INFO - Learning rate:0.001000
+2024-02-22 18:48:57,958 - Model - INFO - Training mean loss: 0.173452
+2024-02-22 18:48:57,959 - Model - INFO - Training accuracy: 0.946526
+2024-02-22 18:48:58,153 - Model - INFO - ---- EPOCH 006 EVALUATION ----
+2024-02-22 18:52:36,864 - Model - INFO - eval mean loss: 0.207097
+2024-02-22 18:52:36,864 - Model - INFO - eval point avg class IoU: 0.775554
+2024-02-22 18:52:36,864 - Model - INFO - eval point accuracy: 0.919788
+2024-02-22 18:52:36,864 - Model - INFO - eval point avg class acc: 0.889797
+2024-02-22 18:52:36,864 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.906 
+class wall           weight: 0.376, IoU: 0.909 
+class column         weight: 0.048, IoU: 0.894 
+class beam           weight: 0.063, IoU: 0.826 
+class weight         weight: 0.106, IoU: 0.918 
+class bolt           weight: 0.156, IoU: 0.657 
+class floor          weight: 0.008, IoU: 0.842 
+class foundation     weight: 0.147, IoU: 0.652 
+class sundries       weight: 0.069, IoU: 0.572 
+class joint          weight: 0.012, IoU: 0.579 
+
+2024-02-22 18:52:36,865 - Model - INFO - Eval mean loss: 0.207097
+2024-02-22 18:52:36,865 - Model - INFO - Eval accuracy: 0.919788
+2024-02-22 18:52:36,865 - Model - INFO - Best mIoU: 0.820774
+2024-02-22 18:52:36,865 - Model - INFO - **** Epoch 7 (8/32) ****
+2024-02-22 18:52:36,865 - Model - INFO - Learning rate:0.001000
+2024-02-22 19:13:04,325 - Model - INFO - Training mean loss: 0.172965
+2024-02-22 19:13:04,325 - Model - INFO - Training accuracy: 0.946906
+2024-02-22 19:13:04,525 - Model - INFO - ---- EPOCH 007 EVALUATION ----
+2024-02-22 19:16:42,570 - Model - INFO - eval mean loss: 0.138788
+2024-02-22 19:16:42,570 - Model - INFO - eval point avg class IoU: 0.830899
+2024-02-22 19:16:42,570 - Model - INFO - eval point accuracy: 0.955361
+2024-02-22 19:16:42,570 - Model - INFO - eval point avg class acc: 0.909079
+2024-02-22 19:16:42,570 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.990 
+class wall           weight: 0.376, IoU: 0.922 
+class column         weight: 0.050, IoU: 0.910 
+class beam           weight: 0.064, IoU: 0.840 
+class weight         weight: 0.107, IoU: 0.923 
+class bolt           weight: 0.155, IoU: 0.716 
+class floor          weight: 0.008, IoU: 0.851 
+class foundation     weight: 0.146, IoU: 0.938 
+class sundries       weight: 0.067, IoU: 0.615 
+class joint          weight: 0.012, IoU: 0.604 
+
+2024-02-22 19:16:42,570 - Model - INFO - Eval mean loss: 0.138788
+2024-02-22 19:16:42,570 - Model - INFO - Eval accuracy: 0.955361
+2024-02-22 19:16:42,570 - Model - INFO - Save model...
+2024-02-22 19:16:42,570 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 19:16:42,618 - Model - INFO - Saving model....
+2024-02-22 19:16:42,618 - Model - INFO - Best mIoU: 0.830899
+2024-02-22 19:16:42,618 - Model - INFO - **** Epoch 8 (9/32) ****
+2024-02-22 19:16:42,618 - Model - INFO - Learning rate:0.001000
