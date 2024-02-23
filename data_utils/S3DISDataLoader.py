@@ -13,7 +13,7 @@ class S3DISDataset(Dataset):
         self.block_size = block_size  # 表示数据块的大小。
         self.transform = transform  # 设置实例变量 transform，表示用于对数据进行转换的函数。
         frames = sorted(os.listdir(data_root))  # 获取指定路径下的所有目录，并对其进行排序，将目录名存储在列表 rooms 中。
-        frames = [frame for frame in frames if 'frame-' in frame]  # 筛选出列表 rooms 中包含字符串 'Area_' 的目录。
+        frames = [frame for frame in frames if 'frame-' in frame]  # 筛选出列表 rooms 中包含字符串 'frame-' 的目录。
         # 根据 split 参数的值选择训练集或测试集的房间列表。
         if split == 'train':
             rooms_split = [frame for frame in frames if not '_{}.npy'.format(test_area) in frame]
@@ -104,7 +104,7 @@ class S3DISDataset(Dataset):
 
 class ScannetDatasetWholeScene():
     # prepare to give prediction on each points
-    def __init__(self, root, block_points=4096, split='test', test_area=5, stride=0.5, block_size=1.0, padding=0.001):
+    def __init__(self, root, block_points=4096, split='test', test_area=4, stride=0.5, block_size=1.0, padding=0.001):
         self.block_points = block_points
         self.block_size = block_size
         self.padding = padding
@@ -113,10 +113,13 @@ class ScannetDatasetWholeScene():
         self.stride = stride
         self.scene_points_num = []
         assert split in ['train', 'test']
+        frames = sorted(os.listdir(root))  # 获取指定路径下的所有目录，并对其进行排序，将目录名存储在列表 rooms 中。
+        frames = [frame for frame in frames if 'frame-' in frame]  # 筛选出列表 rooms 中包含字符串 'frame-' 的目录。
+        # 根据 split 参数的值选择训练集或测试集的房间列表。
         if self.split == 'train':
-            self.file_list = [d for d in os.listdir(root) if d.find('Area_%d' % test_area) is -1]
+            self.file_list = [frame for frame in frames if not '_{}.npy'.format(test_area) in frame]
         else:
-            self.file_list = [d for d in os.listdir(root) if d.find('Area_%d' % test_area) is not -1]
+            self.file_list = [frame for frame in frames if '_{}.npy'.format(test_area) in frame]
         self.scene_points_list = []
         self.semantic_labels_list = []
         self.room_coord_min, self.room_coord_max = [], []
@@ -129,9 +132,9 @@ class ScannetDatasetWholeScene():
             self.room_coord_min.append(coord_min), self.room_coord_max.append(coord_max)
         assert len(self.scene_points_list) == len(self.semantic_labels_list)
 
-        labelweights = np.zeros(13)
+        labelweights = np.zeros(10)
         for seg in self.semantic_labels_list:
-            tmp, _ = np.histogram(seg, range(14))
+            tmp, _ = np.histogram(seg, range(11))
             self.scene_points_num.append(seg.shape[0])
             labelweights += tmp
         labelweights = labelweights.astype(np.float32)

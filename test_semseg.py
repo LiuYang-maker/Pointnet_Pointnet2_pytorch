@@ -19,8 +19,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
-classes = ['ceiling', 'floor', 'wall', 'beam', 'column', 'window', 'door', 'table', 'chair', 'sofa', 'bookcase',
-           'board', 'clutter']
+classes = ['ground', 'wall', 'column', 'beam', 'weight', 'bolt', 'floor', 'foundation', 'sundries', 'joint']
 class2label = {cls: i for i, cls in enumerate(classes)}
 seg_classes = class2label
 seg_label_to_cat = {}
@@ -32,11 +31,11 @@ def parse_args():
     '''PARAMETERS'''
     parser = argparse.ArgumentParser('Model')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size in testing [default: 32]')
-    parser.add_argument('--gpu', type=str, default='1', help='specify gpu device')
+    parser.add_argument('--gpu', type=str, default='0', help='specify gpu device')
     parser.add_argument('--num_point', type=int, default=4096, help='point number [default: 4096]')
     parser.add_argument('--log_dir', type=str, required=True, help='experiment root')
     parser.add_argument('--visual', action='store_true', default=False, help='visualize result [default: False]')
-    parser.add_argument('--test_area', type=int, default=5, help='area for testing, option: 1-6 [default: 5]')
+    parser.add_argument('--test_area', type=int, default=4, help='area for testing, option: 1-6 [default: 5]')
     parser.add_argument('--num_votes', type=int, default=3, help='aggregate segmentation scores with voting [default: 5]')
     return parser.parse_args()
 
@@ -57,7 +56,7 @@ def main(args):
         print(str)
 
     '''HYPER PARAMETER'''
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
+    # os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
     experiment_dir = 'log/sem_seg/' + args.log_dir
     visual_dir = experiment_dir + '/visual/'
     visual_dir = Path(visual_dir)
@@ -75,11 +74,11 @@ def main(args):
     log_string('PARAMETER ...')
     log_string(args)
 
-    NUM_CLASSES = 13
+    NUM_CLASSES = 10
     BATCH_SIZE = args.batch_size
     NUM_POINT = args.num_point
 
-    root = 'data/stanford_indoor3d/'
+    root = 'data/frame_dataset_npy/'
 
     TEST_DATASET_WHOLE_SCENE = ScannetDatasetWholeScene(root, split='test', test_area=args.test_area, block_points=NUM_POINT)
     log_string("The number of test data is: %d" % len(TEST_DATASET_WHOLE_SCENE))
@@ -88,7 +87,7 @@ def main(args):
     model_name = os.listdir(experiment_dir + '/logs')[0].split('.')[0]
     MODEL = importlib.import_module(model_name)
     classifier = MODEL.get_model(NUM_CLASSES).cuda()
-    # classifier = torch.nn.DataParallel(classifier, device_ids=[0, 1])  # 使用GPU 0 和 GPU 1
+    classifier = torch.nn.DataParallel(classifier, device_ids=[0, 1])  # 使用GPU 0 和 GPU 1
     checkpoint = torch.load(str(experiment_dir) + '/checkpoints/best_model.pth')
     classifier.load_state_dict(checkpoint['model_state_dict'])
     classifier = classifier.eval()
