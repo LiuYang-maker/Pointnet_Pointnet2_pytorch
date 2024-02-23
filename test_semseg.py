@@ -92,8 +92,11 @@ def main(args):
     classifier.load_state_dict(checkpoint['model_state_dict'])
     classifier = classifier.eval()
 
+    # 使用torch.no_grad()上下文管理器，禁用梯度计算，因为在评估阶段我们不需要梯度。
     with torch.no_grad():
+        # 获取测试数据集的场景ID列表
         scene_id = TEST_DATASET_WHOLE_SCENE.file_list
+        # 去除文件扩展名
         scene_id = [x[:-4] for x in scene_id]
         num_batches = len(TEST_DATASET_WHOLE_SCENE)
 
@@ -109,8 +112,9 @@ def main(args):
             total_correct_class_tmp = [0 for _ in range(NUM_CLASSES)]
             total_iou_deno_class_tmp = [0 for _ in range(NUM_CLASSES)]
             if args.visual:
-                fout = open(os.path.join(visual_dir, scene_id[batch_idx] + '_pred.obj'), 'w')
-                fout_gt = open(os.path.join(visual_dir, scene_id[batch_idx] + '_gt.obj'), 'w')
+                # 保存格式从obj修改为txt
+                fout = open(os.path.join(visual_dir, scene_id[batch_idx] + '_pred.txt'), 'w')
+                fout_gt = open(os.path.join(visual_dir, scene_id[batch_idx] + '_gt.txt'), 'w')
 
             whole_scene_data = TEST_DATASET_WHOLE_SCENE.scene_points_list[batch_idx]
             whole_scene_label = TEST_DATASET_WHOLE_SCENE.semantic_labels_list[batch_idx]
@@ -168,16 +172,16 @@ def main(args):
                     pl_save.write(str(int(i)) + '\n')
                 pl_save.close()
             for i in range(whole_scene_label.shape[0]):
-                color = g_label2color[pred_label[i]]
-                color_gt = g_label2color[whole_scene_label[i]]
+                # color = g_label2color[pred_label[i]]
+                # color_gt = g_label2color[whole_scene_label[i]]
+                # 保存格式修改为 xyzrgbl,格式为txt
                 if args.visual:
-                    fout.write('v %f %f %f %d %d %d\n' % (
-                        whole_scene_data[i, 0], whole_scene_data[i, 1], whole_scene_data[i, 2], color[0], color[1],
-                        color[2]))
-                    fout_gt.write(
-                        'v %f %f %f %d %d %d\n' % (
-                            whole_scene_data[i, 0], whole_scene_data[i, 1], whole_scene_data[i, 2], color_gt[0],
-                            color_gt[1], color_gt[2]))
+                    fout.write('v %f %f %f %d %d %d %d\n' % (
+                        whole_scene_data[i, 0], whole_scene_data[i, 1], whole_scene_data[i, 2], whole_scene_data[i, 3], whole_scene_data[i, 4],
+                        whole_scene_data[i, 5], pred_label[i]))
+                    fout_gt.write('v %f %f %f %d %d %d %d\n' % (
+                        whole_scene_data[i, 0], whole_scene_data[i, 1], whole_scene_data[i, 2], whole_scene_data[i, 3], whole_scene_data[i, 4],
+                        whole_scene_data[i, 5], whole_scene_label[i]))
             if args.visual:
                 fout.close()
                 fout_gt.close()
