@@ -1371,3 +1371,613 @@ class joint          weight: 0.012, IoU: 0.604
 2024-02-22 19:16:42,618 - Model - INFO - Best mIoU: 0.830899
 2024-02-22 19:16:42,618 - Model - INFO - **** Epoch 8 (9/32) ****
 2024-02-22 19:16:42,618 - Model - INFO - Learning rate:0.001000
+2024-02-22 19:37:08,130 - Model - INFO - Training mean loss: 0.171364
+2024-02-22 19:37:08,130 - Model - INFO - Training accuracy: 0.947154
+2024-02-22 19:37:08,336 - Model - INFO - ---- EPOCH 008 EVALUATION ----
+2024-02-22 19:40:41,891 - Model - INFO - eval mean loss: 0.145655
+2024-02-22 19:40:41,891 - Model - INFO - eval point avg class IoU: 0.823942
+2024-02-22 19:40:41,891 - Model - INFO - eval point accuracy: 0.951475
+2024-02-22 19:40:41,891 - Model - INFO - eval point avg class acc: 0.910351
+2024-02-22 19:40:41,891 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.980 
+class wall           weight: 0.374, IoU: 0.918 
+class column         weight: 0.051, IoU: 0.908 
+class beam           weight: 0.063, IoU: 0.840 
+class weight         weight: 0.107, IoU: 0.924 
+class bolt           weight: 0.156, IoU: 0.709 
+class floor          weight: 0.008, IoU: 0.852 
+class foundation     weight: 0.147, IoU: 0.894 
+class sundries       weight: 0.068, IoU: 0.604 
+class joint          weight: 0.012, IoU: 0.611 
+
+2024-02-22 19:40:41,891 - Model - INFO - Eval mean loss: 0.145655
+2024-02-22 19:40:41,891 - Model - INFO - Eval accuracy: 0.951475
+2024-02-22 19:40:41,891 - Model - INFO - Best mIoU: 0.830899
+2024-02-22 19:40:41,891 - Model - INFO - **** Epoch 9 (10/32) ****
+2024-02-22 19:40:41,891 - Model - INFO - Learning rate:0.001000
+2024-02-22 20:00:56,977 - Model - INFO - Training mean loss: 0.169072
+2024-02-22 20:00:56,977 - Model - INFO - Training accuracy: 0.947623
+2024-02-22 20:00:57,173 - Model - INFO - ---- EPOCH 009 EVALUATION ----
+2024-02-22 20:04:32,693 - Model - INFO - eval mean loss: 0.168930
+2024-02-22 20:04:32,693 - Model - INFO - eval point avg class IoU: 0.804172
+2024-02-22 20:04:32,693 - Model - INFO - eval point accuracy: 0.944655
+2024-02-22 20:04:32,693 - Model - INFO - eval point avg class acc: 0.897567
+2024-02-22 20:04:32,693 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.970 
+class wall           weight: 0.381, IoU: 0.912 
+class column         weight: 0.048, IoU: 0.899 
+class beam           weight: 0.065, IoU: 0.831 
+class weight         weight: 0.106, IoU: 0.916 
+class bolt           weight: 0.153, IoU: 0.695 
+class floor          weight: 0.008, IoU: 0.841 
+class foundation     weight: 0.144, IoU: 0.858 
+class sundries       weight: 0.067, IoU: 0.543 
+class joint          weight: 0.012, IoU: 0.577 
+
+2024-02-22 20:04:32,694 - Model - INFO - Eval mean loss: 0.168930
+2024-02-22 20:04:32,694 - Model - INFO - Eval accuracy: 0.944655
+2024-02-22 20:04:32,694 - Model - INFO - Best mIoU: 0.830899
+2024-02-22 20:04:32,694 - Model - INFO - **** Epoch 10 (11/32) ****
+2024-02-22 20:04:32,694 - Model - INFO - Learning rate:0.000700
+2024-02-22 20:24:44,889 - Model - INFO - Training mean loss: 0.159985
+2024-02-22 20:24:44,889 - Model - INFO - Training accuracy: 0.950272
+2024-02-22 20:24:44,889 - Model - INFO - Save model...
+2024-02-22 20:24:44,889 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2024-02-22 20:24:44,936 - Model - INFO - Saving model....
+2024-02-22 20:24:45,160 - Model - INFO - ---- EPOCH 010 EVALUATION ----
+2024-02-22 20:28:20,423 - Model - INFO - eval mean loss: 0.132350
+2024-02-22 20:28:20,423 - Model - INFO - eval point avg class IoU: 0.832675
+2024-02-22 20:28:20,423 - Model - INFO - eval point accuracy: 0.955929
+2024-02-22 20:28:20,423 - Model - INFO - eval point avg class acc: 0.917326
+2024-02-22 20:28:20,423 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.988 
+class wall           weight: 0.391, IoU: 0.929 
+class column         weight: 0.048, IoU: 0.910 
+class beam           weight: 0.061, IoU: 0.840 
+class weight         weight: 0.104, IoU: 0.925 
+class bolt           weight: 0.152, IoU: 0.717 
+class floor          weight: 0.008, IoU: 0.850 
+class foundation     weight: 0.142, IoU: 0.926 
+class sundries       weight: 0.067, IoU: 0.631 
+class joint          weight: 0.011, IoU: 0.611 
+
+2024-02-22 20:28:20,423 - Model - INFO - Eval mean loss: 0.132350
+2024-02-22 20:28:20,423 - Model - INFO - Eval accuracy: 0.955929
+2024-02-22 20:28:20,423 - Model - INFO - Save model...
+2024-02-22 20:28:20,424 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 20:28:20,470 - Model - INFO - Saving model....
+2024-02-22 20:28:20,470 - Model - INFO - Best mIoU: 0.832675
+2024-02-22 20:28:20,471 - Model - INFO - **** Epoch 11 (12/32) ****
+2024-02-22 20:28:20,471 - Model - INFO - Learning rate:0.000700
+2024-02-22 20:48:35,815 - Model - INFO - Training mean loss: 0.159388
+2024-02-22 20:48:35,815 - Model - INFO - Training accuracy: 0.950511
+2024-02-22 20:48:36,009 - Model - INFO - ---- EPOCH 011 EVALUATION ----
+2024-02-22 20:52:11,524 - Model - INFO - eval mean loss: 0.136752
+2024-02-22 20:52:11,524 - Model - INFO - eval point avg class IoU: 0.834197
+2024-02-22 20:52:11,524 - Model - INFO - eval point accuracy: 0.953841
+2024-02-22 20:52:11,524 - Model - INFO - eval point avg class acc: 0.916115
+2024-02-22 20:52:11,525 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.983 
+class wall           weight: 0.380, IoU: 0.928 
+class column         weight: 0.047, IoU: 0.911 
+class beam           weight: 0.064, IoU: 0.847 
+class weight         weight: 0.107, IoU: 0.923 
+class bolt           weight: 0.154, IoU: 0.736 
+class floor          weight: 0.008, IoU: 0.853 
+class foundation     weight: 0.144, IoU: 0.903 
+class sundries       weight: 0.069, IoU: 0.644 
+class joint          weight: 0.012, IoU: 0.615 
+
+2024-02-22 20:52:11,525 - Model - INFO - Eval mean loss: 0.136752
+2024-02-22 20:52:11,525 - Model - INFO - Eval accuracy: 0.953841
+2024-02-22 20:52:11,525 - Model - INFO - Save model...
+2024-02-22 20:52:11,525 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 20:52:11,572 - Model - INFO - Saving model....
+2024-02-22 20:52:11,572 - Model - INFO - Best mIoU: 0.834197
+2024-02-22 20:52:11,572 - Model - INFO - **** Epoch 12 (13/32) ****
+2024-02-22 20:52:11,572 - Model - INFO - Learning rate:0.000700
+2024-02-22 21:12:29,983 - Model - INFO - Training mean loss: 0.158000
+2024-02-22 21:12:29,983 - Model - INFO - Training accuracy: 0.950915
+2024-02-22 21:12:30,176 - Model - INFO - ---- EPOCH 012 EVALUATION ----
+2024-02-22 21:16:05,803 - Model - INFO - eval mean loss: 0.130604
+2024-02-22 21:16:05,803 - Model - INFO - eval point avg class IoU: 0.836442
+2024-02-22 21:16:05,803 - Model - INFO - eval point accuracy: 0.956784
+2024-02-22 21:16:05,803 - Model - INFO - eval point avg class acc: 0.917076
+2024-02-22 21:16:05,803 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.989 
+class wall           weight: 0.379, IoU: 0.927 
+class column         weight: 0.048, IoU: 0.918 
+class beam           weight: 0.063, IoU: 0.843 
+class weight         weight: 0.105, IoU: 0.928 
+class bolt           weight: 0.157, IoU: 0.737 
+class floor          weight: 0.008, IoU: 0.856 
+class foundation     weight: 0.146, IoU: 0.924 
+class sundries       weight: 0.067, IoU: 0.624 
+class joint          weight: 0.011, IoU: 0.618 
+
+2024-02-22 21:16:05,803 - Model - INFO - Eval mean loss: 0.130604
+2024-02-22 21:16:05,803 - Model - INFO - Eval accuracy: 0.956784
+2024-02-22 21:16:05,803 - Model - INFO - Save model...
+2024-02-22 21:16:05,803 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 21:16:05,851 - Model - INFO - Saving model....
+2024-02-22 21:16:05,851 - Model - INFO - Best mIoU: 0.836442
+2024-02-22 21:16:05,851 - Model - INFO - **** Epoch 13 (14/32) ****
+2024-02-22 21:16:05,851 - Model - INFO - Learning rate:0.000700
+2024-02-22 21:36:35,135 - Model - INFO - Training mean loss: 0.156596
+2024-02-22 21:36:35,135 - Model - INFO - Training accuracy: 0.951220
+2024-02-22 21:36:35,348 - Model - INFO - ---- EPOCH 013 EVALUATION ----
+2024-02-22 21:40:14,970 - Model - INFO - eval mean loss: 0.135204
+2024-02-22 21:40:14,970 - Model - INFO - eval point avg class IoU: 0.831318
+2024-02-22 21:40:14,970 - Model - INFO - eval point accuracy: 0.955942
+2024-02-22 21:40:14,970 - Model - INFO - eval point avg class acc: 0.910271
+2024-02-22 21:40:14,970 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.991 
+class wall           weight: 0.381, IoU: 0.929 
+class column         weight: 0.050, IoU: 0.914 
+class beam           weight: 0.064, IoU: 0.841 
+class weight         weight: 0.107, IoU: 0.923 
+class bolt           weight: 0.152, IoU: 0.725 
+class floor          weight: 0.008, IoU: 0.849 
+class foundation     weight: 0.143, IoU: 0.938 
+class sundries       weight: 0.068, IoU: 0.597 
+class joint          weight: 0.012, IoU: 0.607 
+
+2024-02-22 21:40:14,971 - Model - INFO - Eval mean loss: 0.135204
+2024-02-22 21:40:14,971 - Model - INFO - Eval accuracy: 0.955942
+2024-02-22 21:40:14,971 - Model - INFO - Best mIoU: 0.836442
+2024-02-22 21:40:14,971 - Model - INFO - **** Epoch 14 (15/32) ****
+2024-02-22 21:40:14,971 - Model - INFO - Learning rate:0.000700
+2024-02-22 22:00:41,468 - Model - INFO - Training mean loss: 0.157216
+2024-02-22 22:00:41,468 - Model - INFO - Training accuracy: 0.950974
+2024-02-22 22:00:41,672 - Model - INFO - ---- EPOCH 014 EVALUATION ----
+2024-02-22 22:04:21,127 - Model - INFO - eval mean loss: 0.138526
+2024-02-22 22:04:21,127 - Model - INFO - eval point avg class IoU: 0.832704
+2024-02-22 22:04:21,127 - Model - INFO - eval point accuracy: 0.955694
+2024-02-22 22:04:21,127 - Model - INFO - eval point avg class acc: 0.908371
+2024-02-22 22:04:21,127 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.991 
+class wall           weight: 0.383, IoU: 0.928 
+class column         weight: 0.048, IoU: 0.900 
+class beam           weight: 0.064, IoU: 0.837 
+class weight         weight: 0.105, IoU: 0.924 
+class bolt           weight: 0.154, IoU: 0.731 
+class floor          weight: 0.008, IoU: 0.852 
+class foundation     weight: 0.144, IoU: 0.934 
+class sundries       weight: 0.067, IoU: 0.627 
+class joint          weight: 0.011, IoU: 0.604 
+
+2024-02-22 22:04:21,127 - Model - INFO - Eval mean loss: 0.138526
+2024-02-22 22:04:21,127 - Model - INFO - Eval accuracy: 0.955694
+2024-02-22 22:04:21,127 - Model - INFO - Best mIoU: 0.836442
+2024-02-22 22:04:21,127 - Model - INFO - **** Epoch 15 (16/32) ****
+2024-02-22 22:04:21,127 - Model - INFO - Learning rate:0.000700
+2024-02-22 22:24:48,241 - Model - INFO - Training mean loss: 0.157909
+2024-02-22 22:24:48,241 - Model - INFO - Training accuracy: 0.950836
+2024-02-22 22:24:48,241 - Model - INFO - Save model...
+2024-02-22 22:24:48,241 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2024-02-22 22:24:48,289 - Model - INFO - Saving model....
+2024-02-22 22:24:48,543 - Model - INFO - ---- EPOCH 015 EVALUATION ----
+2024-02-22 22:28:27,070 - Model - INFO - eval mean loss: 0.130520
+2024-02-22 22:28:27,070 - Model - INFO - eval point avg class IoU: 0.839094
+2024-02-22 22:28:27,070 - Model - INFO - eval point accuracy: 0.957940
+2024-02-22 22:28:27,070 - Model - INFO - eval point avg class acc: 0.913041
+2024-02-22 22:28:27,070 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.990 
+class wall           weight: 0.385, IoU: 0.932 
+class column         weight: 0.049, IoU: 0.911 
+class beam           weight: 0.063, IoU: 0.848 
+class weight         weight: 0.105, IoU: 0.927 
+class bolt           weight: 0.152, IoU: 0.730 
+class floor          weight: 0.008, IoU: 0.856 
+class foundation     weight: 0.143, IoU: 0.935 
+class sundries       weight: 0.066, IoU: 0.652 
+class joint          weight: 0.012, IoU: 0.609 
+
+2024-02-22 22:28:27,070 - Model - INFO - Eval mean loss: 0.130520
+2024-02-22 22:28:27,070 - Model - INFO - Eval accuracy: 0.957940
+2024-02-22 22:28:27,070 - Model - INFO - Save model...
+2024-02-22 22:28:27,070 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-22 22:28:27,117 - Model - INFO - Saving model....
+2024-02-22 22:28:27,118 - Model - INFO - Best mIoU: 0.839094
+2024-02-22 22:28:27,118 - Model - INFO - **** Epoch 16 (17/32) ****
+2024-02-22 22:28:27,118 - Model - INFO - Learning rate:0.000700
+2024-02-22 22:48:53,392 - Model - INFO - Training mean loss: 0.156066
+2024-02-22 22:48:53,392 - Model - INFO - Training accuracy: 0.951218
+2024-02-22 22:48:53,606 - Model - INFO - ---- EPOCH 016 EVALUATION ----
+2024-02-22 22:52:31,797 - Model - INFO - eval mean loss: 0.129938
+2024-02-22 22:52:31,798 - Model - INFO - eval point avg class IoU: 0.834735
+2024-02-22 22:52:31,798 - Model - INFO - eval point accuracy: 0.956847
+2024-02-22 22:52:31,798 - Model - INFO - eval point avg class acc: 0.916234
+2024-02-22 22:52:31,798 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.989 
+class wall           weight: 0.384, IoU: 0.929 
+class column         weight: 0.048, IoU: 0.914 
+class beam           weight: 0.062, IoU: 0.847 
+class weight         weight: 0.105, IoU: 0.923 
+class bolt           weight: 0.154, IoU: 0.697 
+class floor          weight: 0.008, IoU: 0.855 
+class foundation     weight: 0.144, IoU: 0.930 
+class sundries       weight: 0.068, IoU: 0.641 
+class joint          weight: 0.011, IoU: 0.622 
+
+2024-02-22 22:52:31,798 - Model - INFO - Eval mean loss: 0.129938
+2024-02-22 22:52:31,798 - Model - INFO - Eval accuracy: 0.956847
+2024-02-22 22:52:31,798 - Model - INFO - Best mIoU: 0.839094
+2024-02-22 22:52:31,798 - Model - INFO - **** Epoch 17 (18/32) ****
+2024-02-22 22:52:31,798 - Model - INFO - Learning rate:0.000700
+2024-02-22 23:13:01,458 - Model - INFO - Training mean loss: 0.155601
+2024-02-22 23:13:01,459 - Model - INFO - Training accuracy: 0.951461
+2024-02-22 23:13:01,661 - Model - INFO - ---- EPOCH 017 EVALUATION ----
+2024-02-22 23:16:40,237 - Model - INFO - eval mean loss: 0.149384
+2024-02-22 23:16:40,237 - Model - INFO - eval point avg class IoU: 0.821949
+2024-02-22 23:16:40,237 - Model - INFO - eval point accuracy: 0.951813
+2024-02-22 23:16:40,237 - Model - INFO - eval point avg class acc: 0.907426
+2024-02-22 23:16:40,237 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.984 
+class wall           weight: 0.375, IoU: 0.914 
+class column         weight: 0.050, IoU: 0.896 
+class beam           weight: 0.064, IoU: 0.839 
+class weight         weight: 0.105, IoU: 0.922 
+class bolt           weight: 0.157, IoU: 0.703 
+class floor          weight: 0.008, IoU: 0.849 
+class foundation     weight: 0.146, IoU: 0.911 
+class sundries       weight: 0.068, IoU: 0.600 
+class joint          weight: 0.011, IoU: 0.602 
+
+2024-02-22 23:16:40,237 - Model - INFO - Eval mean loss: 0.149384
+2024-02-22 23:16:40,237 - Model - INFO - Eval accuracy: 0.951813
+2024-02-22 23:16:40,237 - Model - INFO - Best mIoU: 0.839094
+2024-02-22 23:16:40,237 - Model - INFO - **** Epoch 18 (19/32) ****
+2024-02-22 23:16:40,237 - Model - INFO - Learning rate:0.000700
+2024-02-22 23:37:08,770 - Model - INFO - Training mean loss: 0.155749
+2024-02-22 23:37:08,770 - Model - INFO - Training accuracy: 0.951578
+2024-02-22 23:37:08,977 - Model - INFO - ---- EPOCH 018 EVALUATION ----
+2024-02-22 23:40:47,138 - Model - INFO - eval mean loss: 0.134632
+2024-02-22 23:40:47,138 - Model - INFO - eval point avg class IoU: 0.834740
+2024-02-22 23:40:47,146 - Model - INFO - eval point accuracy: 0.955309
+2024-02-22 23:40:47,146 - Model - INFO - eval point avg class acc: 0.915426
+2024-02-22 23:40:47,146 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.989 
+class wall           weight: 0.375, IoU: 0.925 
+class column         weight: 0.050, IoU: 0.902 
+class beam           weight: 0.063, IoU: 0.847 
+class weight         weight: 0.107, IoU: 0.922 
+class bolt           weight: 0.155, IoU: 0.730 
+class floor          weight: 0.008, IoU: 0.847 
+class foundation     weight: 0.145, IoU: 0.936 
+class sundries       weight: 0.070, IoU: 0.638 
+class joint          weight: 0.012, IoU: 0.610 
+
+2024-02-22 23:40:47,146 - Model - INFO - Eval mean loss: 0.134632
+2024-02-22 23:40:47,147 - Model - INFO - Eval accuracy: 0.955309
+2024-02-22 23:40:47,147 - Model - INFO - Best mIoU: 0.839094
+2024-02-22 23:40:47,147 - Model - INFO - **** Epoch 19 (20/32) ****
+2024-02-22 23:40:47,147 - Model - INFO - Learning rate:0.000700
+2024-02-23 00:01:14,102 - Model - INFO - Training mean loss: 0.154432
+2024-02-23 00:01:14,102 - Model - INFO - Training accuracy: 0.951605
+2024-02-23 00:01:14,304 - Model - INFO - ---- EPOCH 019 EVALUATION ----
+2024-02-23 00:04:50,784 - Model - INFO - eval mean loss: 0.138184
+2024-02-23 00:04:50,784 - Model - INFO - eval point avg class IoU: 0.830249
+2024-02-23 00:04:50,784 - Model - INFO - eval point accuracy: 0.954517
+2024-02-23 00:04:50,784 - Model - INFO - eval point avg class acc: 0.914024
+2024-02-23 00:04:50,784 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.989 
+class wall           weight: 0.371, IoU: 0.915 
+class column         weight: 0.048, IoU: 0.906 
+class beam           weight: 0.064, IoU: 0.840 
+class weight         weight: 0.108, IoU: 0.924 
+class bolt           weight: 0.157, IoU: 0.725 
+class floor          weight: 0.008, IoU: 0.853 
+class foundation     weight: 0.147, IoU: 0.929 
+class sundries       weight: 0.070, IoU: 0.620 
+class joint          weight: 0.012, IoU: 0.601 
+
+2024-02-23 00:04:50,784 - Model - INFO - Eval mean loss: 0.138184
+2024-02-23 00:04:50,784 - Model - INFO - Eval accuracy: 0.954517
+2024-02-23 00:04:50,784 - Model - INFO - Best mIoU: 0.839094
+2024-02-23 00:04:50,784 - Model - INFO - **** Epoch 20 (21/32) ****
+2024-02-23 00:04:50,784 - Model - INFO - Learning rate:0.000490
+2024-02-23 00:25:03,686 - Model - INFO - Training mean loss: 0.149021
+2024-02-23 00:25:03,686 - Model - INFO - Training accuracy: 0.953209
+2024-02-23 00:25:03,686 - Model - INFO - Save model...
+2024-02-23 00:25:03,686 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2024-02-23 00:25:03,734 - Model - INFO - Saving model....
+2024-02-23 00:25:03,933 - Model - INFO - ---- EPOCH 020 EVALUATION ----
+2024-02-23 00:28:39,749 - Model - INFO - eval mean loss: 0.127159
+2024-02-23 00:28:39,749 - Model - INFO - eval point avg class IoU: 0.841938
+2024-02-23 00:28:39,749 - Model - INFO - eval point accuracy: 0.957044
+2024-02-23 00:28:39,749 - Model - INFO - eval point avg class acc: 0.924624
+2024-02-23 00:28:39,749 - Model - INFO - ------- IoU --------
+class ground         weight: 0.017, IoU: 0.990 
+class wall           weight: 0.369, IoU: 0.930 
+class column         weight: 0.048, IoU: 0.908 
+class beam           weight: 0.066, IoU: 0.849 
+class weight         weight: 0.108, IoU: 0.928 
+class bolt           weight: 0.156, IoU: 0.743 
+class floor          weight: 0.008, IoU: 0.860 
+class foundation     weight: 0.147, IoU: 0.939 
+class sundries       weight: 0.070, IoU: 0.653 
+class joint          weight: 0.012, IoU: 0.620 
+
+2024-02-23 00:28:39,749 - Model - INFO - Eval mean loss: 0.127159
+2024-02-23 00:28:39,749 - Model - INFO - Eval accuracy: 0.957044
+2024-02-23 00:28:39,749 - Model - INFO - Save model...
+2024-02-23 00:28:39,749 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-23 00:28:39,797 - Model - INFO - Saving model....
+2024-02-23 00:28:39,797 - Model - INFO - Best mIoU: 0.841938
+2024-02-23 00:28:39,797 - Model - INFO - **** Epoch 21 (22/32) ****
+2024-02-23 00:28:39,797 - Model - INFO - Learning rate:0.000490
+2024-02-23 00:48:55,237 - Model - INFO - Training mean loss: 0.145159
+2024-02-23 00:48:55,238 - Model - INFO - Training accuracy: 0.954191
+2024-02-23 00:48:55,437 - Model - INFO - ---- EPOCH 021 EVALUATION ----
+2024-02-23 00:52:31,819 - Model - INFO - eval mean loss: 0.135082
+2024-02-23 00:52:31,819 - Model - INFO - eval point avg class IoU: 0.836359
+2024-02-23 00:52:31,819 - Model - INFO - eval point accuracy: 0.956559
+2024-02-23 00:52:31,819 - Model - INFO - eval point avg class acc: 0.911272
+2024-02-23 00:52:31,819 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.989 
+class wall           weight: 0.374, IoU: 0.929 
+class column         weight: 0.048, IoU: 0.909 
+class beam           weight: 0.064, IoU: 0.848 
+class weight         weight: 0.108, IoU: 0.925 
+class bolt           weight: 0.156, IoU: 0.728 
+class floor          weight: 0.008, IoU: 0.856 
+class foundation     weight: 0.147, IoU: 0.931 
+class sundries       weight: 0.068, IoU: 0.629 
+class joint          weight: 0.012, IoU: 0.620 
+
+2024-02-23 00:52:31,820 - Model - INFO - Eval mean loss: 0.135082
+2024-02-23 00:52:31,820 - Model - INFO - Eval accuracy: 0.956559
+2024-02-23 00:52:31,820 - Model - INFO - Best mIoU: 0.841938
+2024-02-23 00:52:31,820 - Model - INFO - **** Epoch 22 (23/32) ****
+2024-02-23 00:52:31,820 - Model - INFO - Learning rate:0.000490
+2024-02-23 01:12:41,929 - Model - INFO - Training mean loss: 0.146561
+2024-02-23 01:12:41,929 - Model - INFO - Training accuracy: 0.953847
+2024-02-23 01:12:42,147 - Model - INFO - ---- EPOCH 022 EVALUATION ----
+2024-02-23 01:16:18,620 - Model - INFO - eval mean loss: 0.140659
+2024-02-23 01:16:18,620 - Model - INFO - eval point avg class IoU: 0.838521
+2024-02-23 01:16:18,620 - Model - INFO - eval point accuracy: 0.956635
+2024-02-23 01:16:18,620 - Model - INFO - eval point avg class acc: 0.905049
+2024-02-23 01:16:18,620 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.990 
+class wall           weight: 0.374, IoU: 0.922 
+class column         weight: 0.050, IoU: 0.905 
+class beam           weight: 0.063, IoU: 0.847 
+class weight         weight: 0.107, IoU: 0.925 
+class bolt           weight: 0.157, IoU: 0.751 
+class floor          weight: 0.008, IoU: 0.855 
+class foundation     weight: 0.147, IoU: 0.935 
+class sundries       weight: 0.067, IoU: 0.644 
+class joint          weight: 0.011, IoU: 0.612 
+
+2024-02-23 01:16:18,620 - Model - INFO - Eval mean loss: 0.140659
+2024-02-23 01:16:18,620 - Model - INFO - Eval accuracy: 0.956635
+2024-02-23 01:16:18,620 - Model - INFO - Best mIoU: 0.841938
+2024-02-23 01:16:18,620 - Model - INFO - **** Epoch 23 (24/32) ****
+2024-02-23 01:16:18,620 - Model - INFO - Learning rate:0.000490
+2024-02-23 01:36:31,689 - Model - INFO - Training mean loss: 0.147253
+2024-02-23 01:36:31,689 - Model - INFO - Training accuracy: 0.953684
+2024-02-23 01:36:31,886 - Model - INFO - ---- EPOCH 023 EVALUATION ----
+2024-02-23 01:40:06,604 - Model - INFO - eval mean loss: 0.128332
+2024-02-23 01:40:06,604 - Model - INFO - eval point avg class IoU: 0.841935
+2024-02-23 01:40:06,604 - Model - INFO - eval point accuracy: 0.956708
+2024-02-23 01:40:06,604 - Model - INFO - eval point avg class acc: 0.920902
+2024-02-23 01:40:06,604 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.985 
+class wall           weight: 0.367, IoU: 0.932 
+class column         weight: 0.051, IoU: 0.919 
+class beam           weight: 0.064, IoU: 0.852 
+class weight         weight: 0.108, IoU: 0.929 
+class bolt           weight: 0.158, IoU: 0.736 
+class floor          weight: 0.008, IoU: 0.862 
+class foundation     weight: 0.148, IoU: 0.912 
+class sundries       weight: 0.070, IoU: 0.657 
+class joint          weight: 0.011, IoU: 0.634 
+
+2024-02-23 01:40:06,604 - Model - INFO - Eval mean loss: 0.128332
+2024-02-23 01:40:06,604 - Model - INFO - Eval accuracy: 0.956708
+2024-02-23 01:40:06,604 - Model - INFO - Best mIoU: 0.841938
+2024-02-23 01:40:06,604 - Model - INFO - **** Epoch 24 (25/32) ****
+2024-02-23 01:40:06,604 - Model - INFO - Learning rate:0.000490
+2024-02-23 02:00:20,382 - Model - INFO - Training mean loss: 0.145356
+2024-02-23 02:00:20,382 - Model - INFO - Training accuracy: 0.954223
+2024-02-23 02:00:20,582 - Model - INFO - ---- EPOCH 024 EVALUATION ----
+2024-02-23 02:03:55,709 - Model - INFO - eval mean loss: 0.188365
+2024-02-23 02:03:55,709 - Model - INFO - eval point avg class IoU: 0.814853
+2024-02-23 02:03:55,709 - Model - INFO - eval point accuracy: 0.940579
+2024-02-23 02:03:55,709 - Model - INFO - eval point avg class acc: 0.909627
+2024-02-23 02:03:55,709 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.952 
+class wall           weight: 0.374, IoU: 0.924 
+class column         weight: 0.048, IoU: 0.912 
+class beam           weight: 0.065, IoU: 0.844 
+class weight         weight: 0.107, IoU: 0.916 
+class bolt           weight: 0.156, IoU: 0.731 
+class floor          weight: 0.008, IoU: 0.852 
+class foundation     weight: 0.147, IoU: 0.771 
+class sundries       weight: 0.068, IoU: 0.629 
+class joint          weight: 0.012, IoU: 0.618 
+
+2024-02-23 02:03:55,709 - Model - INFO - Eval mean loss: 0.188365
+2024-02-23 02:03:55,709 - Model - INFO - Eval accuracy: 0.940579
+2024-02-23 02:03:55,709 - Model - INFO - Best mIoU: 0.841938
+2024-02-23 02:03:55,709 - Model - INFO - **** Epoch 25 (26/32) ****
+2024-02-23 02:03:55,709 - Model - INFO - Learning rate:0.000490
+2024-02-23 02:24:09,433 - Model - INFO - Training mean loss: 0.146487
+2024-02-23 02:24:09,433 - Model - INFO - Training accuracy: 0.953793
+2024-02-23 02:24:09,433 - Model - INFO - Save model...
+2024-02-23 02:24:09,433 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2024-02-23 02:24:09,481 - Model - INFO - Saving model....
+2024-02-23 02:24:09,676 - Model - INFO - ---- EPOCH 025 EVALUATION ----
+2024-02-23 02:27:45,193 - Model - INFO - eval mean loss: 0.127212
+2024-02-23 02:27:45,194 - Model - INFO - eval point avg class IoU: 0.842389
+2024-02-23 02:27:45,194 - Model - INFO - eval point accuracy: 0.957769
+2024-02-23 02:27:45,194 - Model - INFO - eval point avg class acc: 0.920231
+2024-02-23 02:27:45,194 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.991 
+class wall           weight: 0.381, IoU: 0.934 
+class column         weight: 0.049, IoU: 0.918 
+class beam           weight: 0.065, IoU: 0.846 
+class weight         weight: 0.107, IoU: 0.925 
+class bolt           weight: 0.152, IoU: 0.749 
+class floor          weight: 0.008, IoU: 0.855 
+class foundation     weight: 0.143, IoU: 0.936 
+class sundries       weight: 0.067, IoU: 0.636 
+class joint          weight: 0.012, IoU: 0.633 
+
+2024-02-23 02:27:45,194 - Model - INFO - Eval mean loss: 0.127212
+2024-02-23 02:27:45,194 - Model - INFO - Eval accuracy: 0.957769
+2024-02-23 02:27:45,194 - Model - INFO - Save model...
+2024-02-23 02:27:45,194 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-23 02:27:45,242 - Model - INFO - Saving model....
+2024-02-23 02:27:45,242 - Model - INFO - Best mIoU: 0.842389
+2024-02-23 02:27:45,242 - Model - INFO - **** Epoch 26 (27/32) ****
+2024-02-23 02:27:45,242 - Model - INFO - Learning rate:0.000490
+2024-02-23 02:47:59,895 - Model - INFO - Training mean loss: 0.145737
+2024-02-23 02:47:59,895 - Model - INFO - Training accuracy: 0.953993
+2024-02-23 02:48:00,097 - Model - INFO - ---- EPOCH 026 EVALUATION ----
+2024-02-23 02:51:35,937 - Model - INFO - eval mean loss: 0.125898
+2024-02-23 02:51:35,937 - Model - INFO - eval point avg class IoU: 0.840530
+2024-02-23 02:51:35,937 - Model - INFO - eval point accuracy: 0.958378
+2024-02-23 02:51:35,937 - Model - INFO - eval point avg class acc: 0.920665
+2024-02-23 02:51:35,937 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.990 
+class wall           weight: 0.385, IoU: 0.930 
+class column         weight: 0.047, IoU: 0.917 
+class beam           weight: 0.063, IoU: 0.849 
+class weight         weight: 0.105, IoU: 0.928 
+class bolt           weight: 0.154, IoU: 0.727 
+class floor          weight: 0.008, IoU: 0.859 
+class foundation     weight: 0.144, IoU: 0.936 
+class sundries       weight: 0.067, IoU: 0.640 
+class joint          weight: 0.011, IoU: 0.630 
+
+2024-02-23 02:51:35,937 - Model - INFO - Eval mean loss: 0.125898
+2024-02-23 02:51:35,937 - Model - INFO - Eval accuracy: 0.958378
+2024-02-23 02:51:35,937 - Model - INFO - Best mIoU: 0.842389
+2024-02-23 02:51:35,937 - Model - INFO - **** Epoch 27 (28/32) ****
+2024-02-23 02:51:35,937 - Model - INFO - Learning rate:0.000490
+2024-02-23 03:11:51,023 - Model - INFO - Training mean loss: 0.148272
+2024-02-23 03:11:51,023 - Model - INFO - Training accuracy: 0.953464
+2024-02-23 03:11:51,221 - Model - INFO - ---- EPOCH 027 EVALUATION ----
+2024-02-23 03:15:25,897 - Model - INFO - eval mean loss: 0.130910
+2024-02-23 03:15:25,897 - Model - INFO - eval point avg class IoU: 0.838920
+2024-02-23 03:15:25,897 - Model - INFO - eval point accuracy: 0.956949
+2024-02-23 03:15:25,897 - Model - INFO - eval point avg class acc: 0.921111
+2024-02-23 03:15:25,897 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.989 
+class wall           weight: 0.381, IoU: 0.929 
+class column         weight: 0.050, IoU: 0.908 
+class beam           weight: 0.063, IoU: 0.851 
+class weight         weight: 0.107, IoU: 0.923 
+class bolt           weight: 0.153, IoU: 0.740 
+class floor          weight: 0.008, IoU: 0.858 
+class foundation     weight: 0.144, IoU: 0.928 
+class sundries       weight: 0.068, IoU: 0.636 
+class joint          weight: 0.011, IoU: 0.626 
+
+2024-02-23 03:15:25,898 - Model - INFO - Eval mean loss: 0.130910
+2024-02-23 03:15:25,898 - Model - INFO - Eval accuracy: 0.956949
+2024-02-23 03:15:25,898 - Model - INFO - Best mIoU: 0.842389
+2024-02-23 03:15:25,898 - Model - INFO - **** Epoch 28 (29/32) ****
+2024-02-23 03:15:25,898 - Model - INFO - Learning rate:0.000490
+2024-02-23 03:35:38,091 - Model - INFO - Training mean loss: 0.144101
+2024-02-23 03:35:38,091 - Model - INFO - Training accuracy: 0.954495
+2024-02-23 03:35:38,292 - Model - INFO - ---- EPOCH 028 EVALUATION ----
+2024-02-23 03:39:13,281 - Model - INFO - eval mean loss: 0.125305
+2024-02-23 03:39:13,281 - Model - INFO - eval point avg class IoU: 0.845157
+2024-02-23 03:39:13,281 - Model - INFO - eval point accuracy: 0.959000
+2024-02-23 03:39:13,281 - Model - INFO - eval point avg class acc: 0.916385
+2024-02-23 03:39:13,281 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.991 
+class wall           weight: 0.372, IoU: 0.936 
+class column         weight: 0.051, IoU: 0.918 
+class beam           weight: 0.064, IoU: 0.851 
+class weight         weight: 0.107, IoU: 0.928 
+class bolt           weight: 0.156, IoU: 0.750 
+class floor          weight: 0.008, IoU: 0.858 
+class foundation     weight: 0.146, IoU: 0.943 
+class sundries       weight: 0.069, IoU: 0.641 
+class joint          weight: 0.011, IoU: 0.635 
+
+2024-02-23 03:39:13,281 - Model - INFO - Eval mean loss: 0.125305
+2024-02-23 03:39:13,281 - Model - INFO - Eval accuracy: 0.959000
+2024-02-23 03:39:13,281 - Model - INFO - Save model...
+2024-02-23 03:39:13,281 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2024-02-23 03:39:13,328 - Model - INFO - Saving model....
+2024-02-23 03:39:13,328 - Model - INFO - Best mIoU: 0.845157
+2024-02-23 03:39:13,328 - Model - INFO - **** Epoch 29 (30/32) ****
+2024-02-23 03:39:13,328 - Model - INFO - Learning rate:0.000490
+2024-02-23 03:59:25,427 - Model - INFO - Training mean loss: 0.148951
+2024-02-23 03:59:25,428 - Model - INFO - Training accuracy: 0.953383
+2024-02-23 03:59:25,622 - Model - INFO - ---- EPOCH 029 EVALUATION ----
+2024-02-23 04:03:01,133 - Model - INFO - eval mean loss: 0.129129
+2024-02-23 04:03:01,133 - Model - INFO - eval point avg class IoU: 0.837325
+2024-02-23 04:03:01,133 - Model - INFO - eval point accuracy: 0.956686
+2024-02-23 04:03:01,133 - Model - INFO - eval point avg class acc: 0.919520
+2024-02-23 04:03:01,134 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.986 
+class wall           weight: 0.382, IoU: 0.936 
+class column         weight: 0.048, IoU: 0.918 
+class beam           weight: 0.063, IoU: 0.851 
+class weight         weight: 0.106, IoU: 0.927 
+class bolt           weight: 0.154, IoU: 0.722 
+class floor          weight: 0.008, IoU: 0.858 
+class foundation     weight: 0.145, IoU: 0.918 
+class sundries       weight: 0.067, IoU: 0.624 
+class joint          weight: 0.011, IoU: 0.634 
+
+2024-02-23 04:03:01,134 - Model - INFO - Eval mean loss: 0.129129
+2024-02-23 04:03:01,134 - Model - INFO - Eval accuracy: 0.956686
+2024-02-23 04:03:01,134 - Model - INFO - Best mIoU: 0.845157
+2024-02-23 04:03:01,134 - Model - INFO - **** Epoch 30 (31/32) ****
+2024-02-23 04:03:01,134 - Model - INFO - Learning rate:0.000343
+2024-02-23 04:23:08,297 - Model - INFO - Training mean loss: 0.139717
+2024-02-23 04:23:08,297 - Model - INFO - Training accuracy: 0.955674
+2024-02-23 04:23:08,297 - Model - INFO - Save model...
+2024-02-23 04:23:08,297 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2024-02-23 04:23:08,345 - Model - INFO - Saving model....
+2024-02-23 04:23:08,538 - Model - INFO - ---- EPOCH 030 EVALUATION ----
+2024-02-23 04:26:43,390 - Model - INFO - eval mean loss: 0.120628
+2024-02-23 04:26:43,390 - Model - INFO - eval point avg class IoU: 0.842940
+2024-02-23 04:26:43,390 - Model - INFO - eval point accuracy: 0.958802
+2024-02-23 04:26:43,390 - Model - INFO - eval point avg class acc: 0.928916
+2024-02-23 04:26:43,390 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.991 
+class wall           weight: 0.384, IoU: 0.934 
+class column         weight: 0.048, IoU: 0.908 
+class beam           weight: 0.064, IoU: 0.853 
+class weight         weight: 0.105, IoU: 0.929 
+class bolt           weight: 0.153, IoU: 0.734 
+class floor          weight: 0.008, IoU: 0.862 
+class foundation     weight: 0.143, IoU: 0.937 
+class sundries       weight: 0.068, IoU: 0.656 
+class joint          weight: 0.011, IoU: 0.626 
+
+2024-02-23 04:26:43,390 - Model - INFO - Eval mean loss: 0.120628
+2024-02-23 04:26:43,390 - Model - INFO - Eval accuracy: 0.958802
+2024-02-23 04:26:43,390 - Model - INFO - Best mIoU: 0.845157
+2024-02-23 04:26:43,390 - Model - INFO - **** Epoch 31 (32/32) ****
+2024-02-23 04:26:43,390 - Model - INFO - Learning rate:0.000343
+2024-02-23 04:46:54,942 - Model - INFO - Training mean loss: 0.139822
+2024-02-23 04:46:54,942 - Model - INFO - Training accuracy: 0.955564
+2024-02-23 04:46:55,138 - Model - INFO - ---- EPOCH 031 EVALUATION ----
+2024-02-23 04:50:30,826 - Model - INFO - eval mean loss: 0.129101
+2024-02-23 04:50:30,826 - Model - INFO - eval point avg class IoU: 0.836854
+2024-02-23 04:50:30,826 - Model - INFO - eval point accuracy: 0.955676
+2024-02-23 04:50:30,826 - Model - INFO - eval point avg class acc: 0.923700
+2024-02-23 04:50:30,826 - Model - INFO - ------- IoU --------
+class ground         weight: 0.016, IoU: 0.987 
+class wall           weight: 0.382, IoU: 0.931 
+class column         weight: 0.049, IoU: 0.909 
+class beam           weight: 0.064, IoU: 0.845 
+class weight         weight: 0.105, IoU: 0.925 
+class bolt           weight: 0.154, IoU: 0.736 
+class floor          weight: 0.008, IoU: 0.855 
+class foundation     weight: 0.144, IoU: 0.920 
+class sundries       weight: 0.067, IoU: 0.638 
+class joint          weight: 0.012, IoU: 0.622 
+
+2024-02-23 04:50:30,826 - Model - INFO - Eval mean loss: 0.129101
+2024-02-23 04:50:30,826 - Model - INFO - Eval accuracy: 0.955676
+2024-02-23 04:50:30,826 - Model - INFO - Best mIoU: 0.845157
