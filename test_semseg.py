@@ -176,10 +176,10 @@ def main(args):
                 # color_gt = g_label2color[whole_scene_label[i]]
                 # 保存格式修改为 xyzrgbl,格式为txt
                 if args.visual:
-                    fout.write('v %f %f %f %d %d %d %d\n' % (
+                    fout.write('%f %f %f %d %d %d %d\n' % (
                         whole_scene_data[i, 0], whole_scene_data[i, 1], whole_scene_data[i, 2], whole_scene_data[i, 3], whole_scene_data[i, 4],
                         whole_scene_data[i, 5], pred_label[i]))
-                    fout_gt.write('v %f %f %f %d %d %d %d\n' % (
+                    fout_gt.write('%f %f %f %d %d %d %d\n' % (
                         whole_scene_data[i, 0], whole_scene_data[i, 1], whole_scene_data[i, 2], whole_scene_data[i, 3], whole_scene_data[i, 4],
                         whole_scene_data[i, 5], whole_scene_label[i]))
             if args.visual:

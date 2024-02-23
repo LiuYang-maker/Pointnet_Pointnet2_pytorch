@@ -260,3 +260,9 @@ class joint         , IoU: 0.754
 2024-02-23 16:15:08,775 - Model - INFO - eval point avg class IoU: 0.895867
 2024-02-23 16:15:08,775 - Model - INFO - eval whole scene point avg class acc: 0.941877
 2024-02-23 16:15:08,775 - Model - INFO - eval whole scene point accuracy: 0.974510
+2024-02-23 19:42:09,011 - Model - INFO - PARAMETER ...
+2024-02-23 19:42:09,011 - Model - INFO - Namespace(batch_size=32, gpu='0', num_point=8192, log_dir='pointnet2_sem_seg', visual=True, test_area=4, num_votes=3)
+2024-02-23 19:42:16,521 - Model - INFO - The number of test data is: 40
+2024-02-23 19:42:16,675 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2024-02-23 19:42:58,246 - Model - INFO - Mean IoU of frame-1-2-2-floorsprocessed_4: 0.8638
+2024-02-23 19:44:19,671 - Model - INFO - Mean IoU of frame-1-2-4-floorsprocessed_4: 0.8811
