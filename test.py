@@ -50,7 +50,23 @@ def check_npy():
             if e < 0 or e > 9:
                 print(file_path + ':exist error! e='+str(e))
 
+def get_data():
+    file_path = r"C:\Users\Administrator\Desktop\tempdata.txt"
+    new_file_path = r"C:\Users\Administrator\Desktop\new_tempdata.txt"
+    data = np.loadtxt(file_path)
+    new_data = []
+    # j = 0
+    for i in range(int(len(data)/10)):
+        j = i * 10
+        tempdata = [data[j],data[j+1],data[j+2],data[j+3],data[j+4],data[j+5],data[j+6],data[j+7],data[j+8],data[j+9]]
+        new_data.append(tempdata)
+        # new_data[j] = tempdata
+        # j = j+1
+    new_data = np.asarray(new_data)
+    np.savetxt(new_file_path, new_data)
+
 
 if __name__ == '__main__':
-    main3()
+    # main3()
     # check_npy()
+    get_data()
